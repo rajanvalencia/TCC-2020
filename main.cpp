@@ -1,5 +1,5 @@
 #include <iostream> // Visual Studio & MacOS用
-#include <GLUT/GLUT.h> // MacOS用
+#include <GLUT/GLUT.h> // MacOS用 (Visual Studio利用の場合ここを消す)
 
 // #include <Windows.h> // Visual Studio用
 // #include <GL\glew.h> // Visual Studio用
