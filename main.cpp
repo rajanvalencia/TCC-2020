@@ -19,6 +19,7 @@ void createLine(float startX, float startY, float endX, float endY){
     glEnd();
 }
 
+//ディスプレイに映る関数
 void disp( void ) {
     float width;
     glGetFloatv(GL_LINE_WIDTH , &width);
@@ -41,7 +42,8 @@ int main(int argc , char ** argv) {
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);
 
     glutCreateWindow("We love TCC!");
-    glutDisplayFunc(disp);
+    
+    glutDisplayFunc(disp); //画面に映る関数をここで呼び出す
 
     glutMainLoop();
     return 0;
