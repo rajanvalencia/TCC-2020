@@ -19,7 +19,7 @@ void createLine(float startX, float startY, float endX, float endY){
     glEnd();
 }
 
-//ディスプレイに映る関数
+//画面に映る関数
 void disp( void ) {
     float width;
     glGetFloatv(GL_LINE_WIDTH , &width);
