@@ -1,5 +1,9 @@
-#include <iostream>
-#include <GLUT/GLUT.h>
+#include <iostream> // Visual Studio & MacOS用
+#include <GLUT/GLUT.h> // MacOS用
+
+// #include <Windows.h> // Visual Studio用
+// #include <GL\glew.h> // Visual Studio用
+// #include <GL\freeglut.h> // Visual Studio用
 
 //球体の作成
 void createSphere(float x, float y, float z){
