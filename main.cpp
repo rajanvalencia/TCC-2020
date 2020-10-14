@@ -8,7 +8,7 @@
 //球体を作成する関数
 void createSphere(float x, float y, float z){
     glTranslatef(x, y, z); //座標
-    glutSolidSphere(0.2, 20.0, 20.0);
+    glutSolidSphere(0.2 /*半径*/, 20.0, 20.0);
 }
 
 //線を作成する関数
