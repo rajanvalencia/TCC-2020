@@ -8,31 +8,51 @@
 //球体を作成する関数
 void createSphere(float x, float y, float z){
     glTranslatef(x, y, z); //座標
-    glutSolidSphere(0.2 /*半径*/, 20.0, 20.0);
+    glutSolidSphere(0.1 /*半径*/, 20.0, 20.0);
 }
 
 //線を作成する関数
-void createLine(float startX, float startY, float endX, float endY){
+void createLine(float startX, float startY, float startZ, float endX, float endY, float endZ){
     glBegin(GL_LINES);
-        glVertex2f(startX , startY); //スタート座標
-        glVertex2f(endX , endY); //終了座標
+        glVertex3f(startX , startY, startZ); //スタート座標
+        glVertex3f(endX , endY, endZ); //終了座標
     glEnd();
+}
+
+//軸を作成する関数
+void createAxis(){
+    glColor3f(1, 0, 0); //色を赤に変更
+    createLine(-10.0, 0, 0, 10.0, 0, 0);
+    
+    glColor3f(0, 0, 1); //色を青に変更
+    createLine(0, -10.0, 0, 0, 10.0, 0);
+    
+    glColor3f(1, 1, 1); //色を白に変更
 }
 
 //画面に映る関数
 void display( void ) {
     
-    createLine(-10.0, 0, 10.0, 0);
-    createLine(0, -10.0, 0, 10.0);
-    createSphere(0, 0, 0);
+    glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
+    glMatrixMode(GL_MODELVIEW);
+   
+    glPushMatrix();
+    
+    createAxis();
+    
+    createLine(-0.1, 0.1, 0, -0.3, 0.1, 0);
+    createSphere(0.3, 0.3, 0);
+    
+    glPopMatrix();
 
     glFlush();
+    glutSwapBuffers();
 }
 
 //プログラムの開始位置
 int main(int argc , char ** argv) {
     glutInit(&argc , argv);
-    glutInitWindowPosition(1000 , 100);
+    glutInitWindowPosition(500 , 100);
     glutInitWindowSize(800 , 800);
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);
 
