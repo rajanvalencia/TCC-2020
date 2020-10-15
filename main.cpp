@@ -21,12 +21,6 @@ void createLine(float startX, float startY, float endX, float endY){
 
 //画面に映る関数
 void disp( void ) {
-    float width;
-    glGetFloatv(GL_LINE_WIDTH , &width);
-
-    glClear(GL_COLOR_BUFFER_BIT);
-
-    //glLineWidth(++width);
     
     createLine(-10.0, 0, 10.0, 0);
     createLine(0, -10.0, 0, 10.0);
