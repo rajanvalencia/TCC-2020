@@ -41,7 +41,7 @@ void display( void ) {
     createAxis(); //軸を作成
     
     createLine(-0.1, 0.1, 0, -0.3, 0.1, 0); //線を作成
-    createSphere(0.3, 0.3, 0); //球体作成
+    createSphere(0.3, 0.3, 0); //球体を作成
     
     glPopMatrix();
 
