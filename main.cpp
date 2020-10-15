@@ -29,7 +29,7 @@ void display( void ) {
     glFlush();
 }
 
-//プログラムここから開始する
+//プログラムの開始位置
 int main(int argc , char ** argv) {
     glutInit(&argc , argv);
     glutInitWindowPosition(1000 , 100);
