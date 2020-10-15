@@ -20,7 +20,7 @@ void createLine(float startX, float startY, float endX, float endY){
 }
 
 //画面に映る関数
-void disp( void ) {
+void display( void ) {
     
     createLine(-10.0, 0, 10.0, 0);
     createLine(0, -10.0, 0, 10.0);
@@ -37,7 +37,7 @@ int main(int argc , char ** argv) {
 
     glutCreateWindow("We love TCC!");
     
-    glutDisplayFunc(disp); //画面に映る関数をここで呼び出す
+    glutDisplayFunc(display); //画面に映る関数をここで呼び出す
 
     glutMainLoop();
     return 0;
