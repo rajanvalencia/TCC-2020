@@ -8,7 +8,7 @@
 //球体を作成する関数
 void createSphere(float x, float y, float z){
     glTranslatef(x, y, z); //座標
-    glutSolidSphere(0.1 /*半径*/, 20.0, 20.0);
+    glutSolidSphere(0.05 /*半径*/, 20.0, 20.0);
 }
 
 //線を作成する関数
@@ -22,10 +22,10 @@ void createLine(float startX, float startY, float startZ, float endX, float endY
 //軸を作成する関数
 void createAxis(){
     glColor3f(1, 0, 0); //色を赤に変更
-    createLine(-10.0, 0, 0, 10.0, 0, 0);
+    createLine(-10.0, 0, 0, 10.0, 0, 0); //x軸
     
     glColor3f(0, 0, 1); //色を青に変更
-    createLine(0, -10.0, 0, 0, 10.0, 0);
+    createLine(0, -10.0, 0, 0, 10.0, 0); //y軸
     
     glColor3f(1, 1, 1); //色を白に変更
 }
