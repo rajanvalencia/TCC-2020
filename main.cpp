@@ -32,10 +32,7 @@ void createAxis(){
 
 //画面に映る関数
 void display( void ) {
-    
-    glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
-    glMatrixMode(GL_MODELVIEW);
-   
+    glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT); //色の初期化
     glPushMatrix();
     
     createAxis(); //軸を作成
@@ -46,7 +43,6 @@ void display( void ) {
     glPopMatrix();
 
     glFlush();
-    glutSwapBuffers();
 }
 
 //プログラムの開始位置
@@ -55,11 +51,9 @@ int main(int argc , char ** argv) {
     glutInitWindowPosition(500 , 100);
     glutInitWindowSize(800 , 800);
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);
-
     glutCreateWindow("We love TCC!");
-    
     glutDisplayFunc(display); //画面に映る関数をここで呼び出す
-
+    glMatrixMode(GL_MODELVIEW);
     glutMainLoop();
     return 0;
 }
