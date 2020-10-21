@@ -86,10 +86,16 @@ void keyboardFunctions(unsigned char key, int a, int b){
 void initialize(void) {
     glViewport(0, 0, WindowWidth, WindowHeight);
     glEnable(GL_DEPTH_TEST); //デプスバッファを使用：glutInitDisplayMode() で GLUT_DEPTH を指定する
-    gluPerspective(30.0, (double)WindowWidth / (double)WindowHeight, 0.1, 1200); //透視投影法の視体積gluPerspactive(縦角度,横角度, 一番近いｚ軸, 一番遠いｚ軸);
-    gluLookAt(0.0, 0.0, 10.0,                   //視点の位置
+    
+    //透視投影法の視体積gluPerspactive
+    gluPerspective(30.0,                                       //縦角度
+                   (double)WindowWidth / (double)WindowHeight, //横角度
+                   0.1,                                        //一番近いｚ軸
+                   1200);                                      //一番遠いｚ軸
+    
+    gluLookAt(0.0, 0.0, 10.0, //視点の位置
               0.0, 0.0, 0.0,  //視点の位置からの視点の中心
-              0.0, 1.0, 0.0);                 //視点の上
+              0.0, 1.0, 0.0); //視点の上
 }
 
 //プログラムの開始位置
