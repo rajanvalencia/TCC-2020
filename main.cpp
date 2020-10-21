@@ -39,16 +39,7 @@ void createAxis(){
 
 //2次元のサイクルを作成する関数
 void create2dCycle(float x, float y, float z){
-    float distance = 0.2;
-    createSphere(x, y, z); //左の球体
-    createSphere(x + distance, y + distance, z); //上の球体
-    createSphere(x + 2 * distance, y, z); //右の球体
-    createSphere(x + distance, y - distance, z); //下の球体
     
-    createLine(x, y, z, x + distance, y + distance, z); //左上の線
-    createLine(x + distance, y + distance, z, x + 2 * distance, y, z); //右上の線
-    createLine(x + 2 * distance, y, z, x + distance, y - distance, z); //右下上の線
-    createLine(x + distance, y - distance, z, x, y, z); //左下の線
 }
 
 //2次元のサイクルとサイクルのつながりを作成する関数
@@ -58,6 +49,7 @@ void create2dConnection(float x, float y, float z){
 
 //2次元のTCCを作成する関数
 void create2dTCC(float x, float y, float z){
+    
 }
 
 //画面に映る関数
@@ -68,7 +60,10 @@ void display( void ) {
     
     glTranslatef(moveX, moveY, moveZ);
     createAxis(); //軸を作成
-    create2dTCC(0, 0, 0);
+    
+    createSphere(0.3, 0.3, 0);
+    
+    createLine(-0.3, 0.3, 0, -0.1, 0.3, 0);
     
     glPopMatrix();
     
@@ -77,8 +72,6 @@ void display( void ) {
 
 //キーボードで操作する関数
 void keyboardFunctions(unsigned char key, int a, int b){
-    float distance_to_move = 0.1;
-
     glutPostRedisplay();
 }
 
