@@ -36,8 +36,18 @@ void createAxis(){
     glColor3f(1, 1, 1); //色を白に変更
 }
 
-//サイクルを作成する関数
-void createCycle(float x, float y, float z){
+//2次元のサイクルを作成する関数
+void create2dCycle(float x, float y, float z){
+    
+}
+
+//2次元のサイクルとサイクルのつながりを作成する関数
+void create2dConnection(float x, float y, float z){
+    
+}
+
+//2次元のTCCを作成する関数
+void create2dTCC(){
     
 }
 
