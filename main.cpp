@@ -8,7 +8,7 @@
 int WindowWidth = 1024;    //生成するウィンドウの幅
 int WindowHeight = 1024;    //生成するウィンドウの高さ
 int k = 2, n = 2;  //kはアリティ nは次元
-float moveX = 0, moveY = 0, moveZ = 1.0;
+float moveX = 0, moveY = 0, moveZ = 0;
 
 //球体を作成する関数
 void createSphere(float x, float y, float z){
